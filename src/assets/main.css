@@ -1,35 +1,66 @@
-@import './base.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+.brown {color: #30291D;}
+.brown-light {color: #70644E;}
+.brown-lighter {color: #92856A;}
+.lighter {color: #DDDBCF;}
+
+@font-face {
+    font-family: "DistilleryDisplay";
+    src: local("DistilleryDisplay"),
+    url(./fonts/DistilleryDisplay.ttf) format("truetype");
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+@font-face {
+    font-family: "EFCOBrookshireRegular";
+    src: local("EFCOBrookshireRegular"),
+    url(./fonts/EFCOBrookshireRegular.ttf) format("truetype");
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+@font-face {
+    font-family: "Bosk";
+    src: local("Bosk"),
+    url(./fonts/Bosk.ttf) format("truetype");
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+body {
+    background-color: #70644E;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.pre-wrap {
+    white-space: pre;
+}
+.italic {
+    font-style: italic;
+}
+.font-bold {
+    font-weight: bold;
+}
+
+.clickable {
+    cursor: pointer;
+    transition: all .1s;
+}
+
+.clickable:hover {
+    filter: brightness(130%);
+    transform: scale(0.98);
+}
+
+.clickable:focus {
+    filter: brightness(130%);
+    transform: scale(0.93);
+}
+
+.scale-enter-active,
+.scale-leave-active {
+    transition: all 0.5s ease;
+}
+
+.scale-enter-from,
+.scale-leave-to {
+    opacity: 0;
+    transform: scale(0.9);
 }
