@@ -1,5 +1,5 @@
 <template>
-  <button class="action-button rounded-xl my-5 lighter"> {{ title }}</button>
+  <button class="action-button rounded-xl my-5 lighter "> {{ title }}</button>
 </template>
 
 <script>
@@ -11,6 +11,8 @@ export default {
 
 <style scoped>
 .action-button {
+  margin-left: auto;
+  margin-right: auto;
   font-family: 'EFCOBrookshireRegular', sans-serif;
   padding: 1.5rem;
   width: 12rem;
@@ -33,7 +35,7 @@ export default {
 /* Medium devices (tablets, 768px and up)  */
 @media (min-width: 640px) {
   .action-button {
-    width: 16rem;
+    width: 10rem;
     font-size: 1.4rem;
   }
 }

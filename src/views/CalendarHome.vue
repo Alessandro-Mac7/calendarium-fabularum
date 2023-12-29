@@ -15,8 +15,8 @@ function pushRoute(route) {
 </script>
 
 <template>
-  <div class="container grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 ">
-      <base-button class=" m-auto" v-for="(m,index) in months" v-bind:key="index" :title=m @click="pushRoute(m)"/>
+  <div class="container grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 m-auto">
+      <base-button v-for="(m,index) in months" v-bind:key="index" :title=m @click="pushRoute(m)"/>
   </div>
 </template>
 
