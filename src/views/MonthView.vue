@@ -27,10 +27,16 @@ function getClass(align, fontWeight, fontStyle) {
   return cssClass;
 }
 function getImgUrl(pic){
-  if(/(http(s?)):\/\//i.test(pic)) {
-    return pic;
-  }
-  return new URL('/src/assets/images/'+pic, import.meta.url).href;
+  return new URL('../assets/images/'+pic, import.meta.url).href;
+}
+
+function unEscape(text) {
+  text = text.replace(/&lt;/g , "<");
+  text = text.replace(/&gt;/g , ">");
+  text = text.replace(/&quot;/g , "\"");
+  text = text.replace(/&#39;/g , "\'");
+  text = text.replace(/&amp;/g , "&");
+  return text;
 }
 
 </script>
@@ -44,7 +50,7 @@ function getImgUrl(pic){
     </header>
     <main class="text-justify mb-5">
       <div v-for="(t,index) in currentMonth.texts" v-bind:key="index" class="my-5">
-        <p :class='getClass(t.align, t.fontWeight, t.fontStyle)'>{{ t.text }}</p>
+        <p :class='getClass(t.align, t.fontWeight, t.fontStyle)'>{{ unEscape(t.text) }}</p>
       </div>
     </main>
   </base-card>
