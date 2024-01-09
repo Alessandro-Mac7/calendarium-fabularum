@@ -46,7 +46,7 @@ function unEscape(text) {
     <header class="text-center">
       <h3 class="title mt-4 mb-2 lighter">{{currentMonth.month}}</h3>
       <h3 class="sub-title mb-4 lighter">{{currentMonth.title}}</h3>
-      <img :alt="currentMonth.title" :src="getImgUrl(currentMonth.img)">
+      <img :alt="currentMonth.title" class="mx-auto" :src="getImgUrl(currentMonth.img)">
     </header>
     <main class="text-justify mb-5">
       <div v-for="(t,index) in currentMonth.texts" v-bind:key="index" class="my-5">
