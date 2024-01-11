@@ -20,6 +20,11 @@ function homeClick() {
       <component :is="Component"/>
     </transition>
   </router-view>
+
+  <footer class="container grid grid-cols-2 mx-auto my-10">
+    <img src="./assets/images/logo-liceo.png" class="w-32 mx-auto " alt="logo-liceo">
+    <img src="./assets/images/logo-liceo-artistico.png" class="w-32 mx-auto" alt="logo-liceo-artistico">
+  </footer>
 </template>
 
 <style scoped>
